@@ -31,11 +31,6 @@
 
 4.指令缩写 (用 : 表示 v-bind: 、用 @ 表示 v-on: 和用 # 表示 v-slot:)
 
-6. css 命名
-
-```
-遵循BEM规范、css前缀使用 shc-
-```
 
 
 二.其他命名规范
@@ -103,8 +98,9 @@ npm run serve
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# 单元测试
+npm run test
 
-
+# 代码扫描
+npm run lint
 ```

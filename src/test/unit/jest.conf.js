@@ -37,7 +37,7 @@ module.exports = {
 };
 
 
-//语句覆盖率（statement coverage）
-//分支覆盖率（branch coverage）
-//函数覆盖率（function coverage）
+// 语句覆盖率（statement coverage）
+// 分支覆盖率（branch coverage）
+// 函数覆盖率（function coverage）
 // 行覆盖率（line coverage

@@ -10,11 +10,11 @@ function resolve(dir) {
 
 module.exports = {
 
-  outputDir: 'dist',// 构建输出目录
+  outputDir: 'dist', // 构建输出目录
 
   lintOnSave: false, // eslint-loader 关闭实时检测
 
-  runtimeCompiler: false,// 运行时版本是否需要编译
+  runtimeCompiler: false, // 运行时版本是否需要编译
 
   productionSourceMap: false, // 是否在构建生产包时生成 sourceMap 文件，false将提高构建速度
 
@@ -60,6 +60,7 @@ module.exports = {
     );
   }, // CSS 相关选项
 
+  // eslint-disable-next-line global-require
   parallel: require('os').cpus().length > 1,
 
   css: {
@@ -94,7 +95,7 @@ module.exports = {
     proxy:
       {
         '': {
-          target: '/api', //跨域设置
+          target: '/api', // 跨域设置
           changeOrigin:
             true, // 如果需要跨域,
           pathRewrite: {},

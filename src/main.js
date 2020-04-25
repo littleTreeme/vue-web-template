@@ -8,10 +8,12 @@ import api from '@/service';
 import globalMixins from '@/mixins/global';
 import cacheKeys from '@/const/cacheKey';
 import '@/icons';
-import { http, localStorage, tools, sessionStorage } from 'kdutil';
+import {
+  http, localStorage, tools, sessionStorage,
+} from 'kdutil';
 
 // const Sentry = sentry.getInstance(Vue, { dsn: 'http://df718b2908704825bbf8b8572813b8b3@sentry.***.com:9000/4' });
-http.init({url: process.env.VUE_APP_URL});
+http.init({ url: process.env.VUE_APP_URL });
 
 Vue.use(ViewUI);
 Vue.use(api);
@@ -19,7 +21,7 @@ Vue.mixin(globalMixins);
 Vue.prototype.$cacheKeys = cacheKeys;
 Vue.prototype.$axios = http;
 Vue.prototype.$tools = tools;
-Vue.prototype.$localStorage= localStorage;
+Vue.prototype.$localStorage = localStorage;
 Vue.prototype.$session = sessionStorage;
 Vue.config.productionTip = false;
 

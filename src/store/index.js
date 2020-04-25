@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import {localStorage} from 'kdutil';
+import { localStorage } from 'kdutil';
 
 Vue.use(Vuex);
 
@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   getters: {
     GET_USERINFO(state) {
-      let {userInfo} = state;
+      let { userInfo } = state;
       // 如果 state 里面获取不到，那么从localStorage里面获取
       if (!userInfo.userName) {
         userInfo = JSON.parse(localStorage.get('userInfo') || '{}');
@@ -24,7 +24,7 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async setUserInfo({commit}, data) {
+    async setUserInfo({ commit }, data) {
       const vm = window.vue;
       await vm.$api.user.getCurrentUser(data).then((res) => {
         commit('SET_USERINFO', res.data);
@@ -33,7 +33,7 @@ export default new Vuex.Store({
         return res.data;
       });
     },
-    async getUserInfo({state, commit}, data) {
+    async getUserInfo({ state, commit }, data) {
       return new Promise((resolve, reject) => {
         if (!state.userInfo) {
           const vm = window.vue;
